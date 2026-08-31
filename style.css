@@ -1,0 +1,294 @@
+  :root {
+    --board: #eef1f5;
+    --ink: #14213d;
+    --ink-soft: #5b6472;
+    --card: #ffffff;
+    --line: #d7dbe2;
+    --tag-a: #f2b134; /* desafio / amarelo */
+    --tag-b: #2f8fd1; /* conteúdo / azul */
+    --tag-c: #34a771; /* marco / verde */
+    --tag-d: #b56de0; /* experiência / roxo */
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--board);
+    color: var(--ink);
+    font-family: 'Space Grotesk', sans-serif;
+  }
+
+  .wrap {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 64px 24px 100px;
+  }
+
+  .mono { font-family: 'JetBrains Mono', monospace; }
+
+  /* ---------- HERO ---------- */
+
+  .hero {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 48px;
+    align-items: center;
+    margin-bottom: 96px;
+  }
+
+  .hero-copy .eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .eyebrow .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--tag-b);
+  }
+
+  .eyebrow span {
+    font-size: 13px;
+    color: var(--ink-soft);
+    letter-spacing: 0.01em;
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(2.2rem, 4.4vw, 3.4rem);
+    font-weight: 700;
+    line-height: 1.1;
+    margin: 0 0 18px;
+  }
+
+  .hero-copy h1 .edit {
+    color: var(--ink-soft);
+    font-weight: 500;
+  }
+
+  .hero-copy p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--ink-soft);
+    max-width: 460px;
+    margin: 0;
+  }
+
+  .hero-art {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 28px;
+  }
+
+  .hero-art svg { width: 100%; height: auto; display: block; }
+
+  /* ---------- SECTION HEADERS ---------- */
+
+  .section-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 28px;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 16px;
+  }
+
+  .section-head h2 { font-size: 22px; font-weight: 600; margin: 0; }
+  .section-head p.lede {
+    font-size: 13px;
+    color: var(--ink-soft);
+    margin: 6px 0 0;
+    max-width: 480px;
+  }
+  .section-head .tag { font-size: 12px; color: var(--ink-soft); white-space: nowrap; }
+
+  section { margin-bottom: 96px; }
+
+  /* ---------- TIMELINE (percurso) ---------- */
+
+  .timeline {
+    display: flex;
+    gap: 0;
+    overflow-x: auto;
+    padding-bottom: 8px;
+  }
+
+  .stop {
+    flex: 1 0 220px;
+    position: relative;
+    padding: 0 18px 0 0;
+  }
+
+  .stop:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 7px;
+    left: 26px;
+    right: 0;
+    height: 2px;
+    background: var(--line);
+  }
+
+  .stop-node {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+  }
+
+  .stop-node .ring {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 2px solid var(--dot, var(--tag-b));
+    background: var(--card);
+    flex-shrink: 0;
+    position: relative;
+    z-index: 1;
+  }
+
+  .stop-node .date { font-size: 12px; color: var(--ink-soft); }
+
+  .stop-body {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 16px;
+    min-height: 110px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .stop-body .type-tag {
+    align-self: flex-start;
+    font-size: 10px;
+    padding: 3px 8px;
+    border-radius: 4px;
+    color: #fff;
+    opacity: 0.9;
+  }
+
+  .stop-body .title {
+    font-weight: 600;
+    font-size: 15px;
+    color: var(--ink-soft);
+  }
+
+  .stop-body .desc {
+    font-size: 13px;
+    color: var(--ink-soft);
+    opacity: 0.7;
+    line-height: 1.5;
+  }
+
+  /* ---------- MURAL (frases) ---------- */
+
+  .mural {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+    gap: 22px;
+    padding: 24px 0 8px;
+  }
+
+  .note {
+    background: var(--note-color, #fff6d8);
+    border-radius: 2px;
+    padding: 20px 16px 16px;
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 6px 14px rgba(20, 33, 61, 0.08);
+    transform: rotate(var(--r, 0deg));
+    transition: transform 0.15s ease;
+  }
+
+  .note:hover { transform: rotate(0deg) translateY(-2px); }
+
+  .note .quote {
+    font-size: 14px;
+    line-height: 1.45;
+    color: var(--ink);
+  }
+
+  .note .signee {
+    font-size: 11px;
+    color: var(--ink-soft);
+    margin-top: 14px;
+    border-top: 1px dashed rgba(20, 33, 61, 0.2);
+    padding-top: 8px;
+  }
+
+  /* ---------- BOARD / TEAM CARDS ---------- */
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 18px;
+  }
+
+  .card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    border-left: 4px solid var(--tag-a);
+    position: relative;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(20, 33, 61, 0.08);
+  }
+
+  .card .ticket-id {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    font-size: 11px;
+    color: var(--ink-soft);
+    opacity: 0.6;
+  }
+
+  .photo-slot {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border: 1.5px dashed var(--line);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--ink-soft);
+    font-size: 10px;
+    text-align: center;
+  }
+
+  .card .name {
+    font-size: 15px;
+    font-weight: 600;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 8px;
+    min-height: 18px;
+    color: var(--ink-soft);
+  }
+
+  .role-tag {
+    display: inline-flex;
+    align-self: flex-start;
+    font-size: 11px;
+    padding: 4px 10px;
+    border-radius: 4px;
+    color: #fff;
+    opacity: 0.85;
+  }
