@@ -523,8 +523,21 @@ button {
 
 .team-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    grid-template-columns: repeat(4, 1fr); /* Força 4 colunas iguais */
     gap: 18px;
+}
+
+/* Ajuste responsivo para telas menores */
+@media (max-width: 992px) {
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 .team-card {
@@ -556,6 +569,7 @@ button {
 .member-photo {
     width: 60px;
     height: 60px;
+    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -564,6 +578,17 @@ button {
     background: linear-gradient(135deg, rgba(99, 102, 241, 0.15), rgba(34, 197, 94, 0.12));
     color: var(--green-light);
     font: 700 13px "JetBrains Mono", monospace;
+}
+
+.member-photo img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.member-photo img + span {
+    display: none;
 }
 
 .member-name {
