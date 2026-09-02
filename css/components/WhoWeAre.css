@@ -1,0 +1,258 @@
+/* ===== Quem somos — mobile first ===== */
+
+.quem_somos-section {
+  --cor-fundo: #0b0f17;
+  --cor-card: #121824;
+  --cor-card-escuro: #080d15;
+  --cor-borda: #263041;
+  --cor-verde: #00e676;
+  --cor-roxo: #7c4dff;
+  --cor-azul: #00b0ff;
+  --cor-amarelo: #ffe047;
+  --cor-titulo: #ffffff;
+  --cor-texto: #9ca3af;
+
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: auto;
+  overflow: hidden;
+  padding: 4rem 0;
+  background-color: var(--cor-fundo);
+  border-bottom: 1px solid var(--cor-borda);
+  text-align: left;
+}
+
+/* Malha discreta semelhante à referência */
+.quem_somos-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.22;
+  background-image:
+    linear-gradient(rgba(0, 230, 118, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 230, 118, 0.08) 1px, transparent 1px);
+  background-size: 32px 32px;
+  mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.8),
+    transparent 75%
+  );
+}
+
+.quem-somos-container {
+  position: relative;
+  z-index: 1;
+}
+
+.quem-somos-header {
+  max-width: 47rem;
+  margin-bottom: 2rem;
+}
+
+.quem-somos-label {
+  display: inline-block;
+  margin-bottom: 0.75rem;
+  color: var(--cor-verde);
+  font-family: "JetBrains Mono", "Courier New", monospace;
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 0.1em;
+}
+
+main section .titulo-quem-somos {
+  margin: 0;
+  color: var(--cor-titulo);
+  font-family: "Space Grotesk", "Segoe UI", sans-serif;
+  font-size: clamp(2rem, 10vw, 3rem);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+}
+
+.titulo-quem-somos span {
+  display: block;
+  color: var(--cor-verde);
+}
+
+.quem-somos-introducao {
+  max-width: 42rem;
+  margin-top: 1rem;
+  color: #cbd5e1;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.quem-somos-conteudo {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.25rem;
+}
+
+.texto-quem-somos,
+.quem-somos-codigo {
+  min-width: 0;
+  border: 1px solid var(--cor-borda);
+  border-radius: 1rem;
+  background-color: var(--cor-card);
+}
+
+.texto-quem-somos {
+  position: relative;
+  display: flex;
+  gap: 1rem;
+  padding: 1.5rem;
+  color: var(--cor-texto);
+}
+
+.texto-quem-somos::before {
+  content: "";
+  position: absolute;
+  inset: -1px auto -1px -1px;
+  width: 4px;
+  border-radius: 1rem 0 0 1rem;
+  background-color: var(--cor-verde);
+}
+
+.texto-quem-somos__marcador {
+  flex: 0 0 auto;
+  padding-top: 0.45rem;
+}
+
+.texto-quem-somos__marcador span {
+  display: block;
+  width: 0.65rem;
+  height: 0.65rem;
+  border: 2px solid var(--cor-verde);
+  border-radius: 50%;
+  box-shadow: 0 0 0.75rem rgba(0, 230, 118, 0.65);
+}
+
+.texto-quem-somos__conteudo h3 {
+  margin-bottom: 0.75rem;
+  color: var(--cor-titulo);
+  font-family: "Space Grotesk", "Segoe UI", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.texto-quem-somos__conteudo p {
+  color: var(--cor-texto);
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+.texto-quem-somos__conteudo p + p {
+  margin-top: 1rem;
+}
+
+/* Bloco inspirado em editor de código */
+
+.quem-somos-codigo {
+  overflow: hidden;
+  background-color: var(--cor-card-escuro);
+}
+
+.quem-somos-codigo__barra {
+  display: flex;
+  align-items: center;
+  min-height: 2.75rem;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--cor-borda);
+  background-color: var(--cor-card);
+}
+
+.quem-somos-codigo__controles {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.quem-somos-codigo__controles span {
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 50%;
+  background-color: #7b879a;
+}
+
+.quem-somos-codigo__arquivo {
+  margin-left: 0.75rem;
+  color: #8290a7;
+  font-family: "JetBrains Mono", "Courier New", monospace;
+  font-size: 0.7rem;
+}
+
+.quem-somos-codigo__bloco {
+  max-width: 100%;
+  margin: 0;
+  overflow-x: auto;
+  padding: 1.5rem;
+  color: #e5e7eb;
+  font-family: "JetBrains Mono", "Courier New", monospace;
+  font-size: clamp(0.7rem, 3.2vw, 0.85rem);
+  line-height: 2;
+  text-align: left;
+  white-space: pre;
+}
+
+.codigo-roxo {
+  color: var(--cor-roxo);
+}
+
+.codigo-azul {
+  color: var(--cor-azul);
+}
+
+.codigo-verde {
+  color: var(--cor-verde);
+}
+
+.codigo-amarelo {
+  color: var(--cor-amarelo);
+}
+
+/* ===== Tablet ===== */
+
+@media (min-width: 600px) {
+  .quem_somos-section {
+    padding: 5rem 0;
+  }
+
+  .texto-quem-somos {
+    padding: 2rem;
+  }
+
+  .quem-somos-codigo__bloco {
+    padding: 2rem;
+  }
+}
+
+/* ===== Desktop ===== */
+
+@media (min-width: 900px) {
+  .quem_somos-section {
+    min-height: 43rem;
+    padding: 6rem 0;
+  }
+
+  .quem-somos-header {
+    margin-bottom: 3rem;
+  }
+
+  .quem-somos-conteudo {
+    grid-template-columns: minmax(0, 1.08fr) minmax(22rem, 0.92fr);
+    align-items: stretch;
+    gap: 1.5rem;
+  }
+
+  .titulo-quem-somos span {
+    display: inline;
+  }
+
+  .texto-quem-somos,
+  .quem-somos-codigo {
+    min-height: 21rem;
+  }
+}
