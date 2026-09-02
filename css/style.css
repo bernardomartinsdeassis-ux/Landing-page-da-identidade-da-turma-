@@ -39,40 +39,130 @@ img {
 }
 
 /* ===== Header ===== */
-.site-header {
-  background-color: #1f2937;
-  color: #fff;
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 20px 48px;
+  background:#0B0F17;
+  background-color: #0B0F17;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   position: sticky;
   top: 0;
   z-index: 100;
 }
 
-.site-header .container {
+/* Marca / logo */
+.navbar__brand {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding-top: 16px;
-  padding-bottom: 16px;
-  flex-wrap: wrap;
   gap: 12px;
+  text-decoration: none;
+  color: #FFFFFF;
 }
 
-.logo {
-  font-size: 1.4rem;
+.navbar__logo-icon {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 700;
+  font-size: 22px;
+  color: #00E676;
+  line-height: 1;
+  font-color: #00E676;
 }
 
-.nav-links {
+.navbar__brand-text {
   display: flex;
-  flex-wrap: wrap;
-  gap: 24px;
+  flex-direction: column;
+  line-height: 1.2;
 }
 
-.nav-links a {
+.navbar__brand-name {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 17px;
+  letter-spacing: 0.02em;
+}
+
+.navbar__brand-tagline {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 500;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  color: #00E676;
+}
+
+/* Navegação */
+.navbar__nav {
+  display: flex;
+}
+
+.navbar__list {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navbar__link {
+  position: relative;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: #9CA3AF;
+  text-decoration: none;
+  padding: 6px 0;
   transition: color 0.2s ease;
 }
 
-.nav-links a:hover {
-  color: #60a5fa;
+.navbar__link:hover,
+.navbar__link:focus-visible {
+  color: #FFFFFF;
+}
+
+.navbar__link.is-active {
+  color: #FFFFFF;
+}
+
+.navbar__link.is-active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -4px;
+  height: 2px;
+  background: #00E676;
+  border-radius: 2px;
+}
+
+.navbar__link:focus-visible {
+  outline: 2px solid #7C4DFF;
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
+/* Toggle mobile (hambúrguer) */
+.navbar__toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 32px;
+  height: 32px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.navbar__toggle span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background: #FFFFFF;
+  border-radius: 2px;
 }
 
 /* ===== Seções (main) ===== */

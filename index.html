@@ -8,19 +8,28 @@
 </head>
 <body>
 
-  <header class="site-header">
-    <div class="container">
-      <h1 class="logo">Meu Projeto</h1>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="#id_turma">Identidade da Turma</a></li>
-          <li><a href="#quem_somos">Quem Somos</a></li>
-          <li><a href="#integrantes">Integreantes</a></li>
-          <li><a href="#mural_turma">Mural da Turma</a></li>
-            <li><a href="#linha_tempo">Linha do Tempo</a></li>
-        </ul>
-      </nav>
-    </div>
+  <header class="navbar">
+    <a href="#inicio" class="navbar__brand">
+      <span class="navbar__logo-icon">&lt;/&gt;</span>
+      <span class="navbar__brand-text">
+        <span class="navbar__brand-name">FULLSTACK</span>
+        <span class="navbar__brand-tagline">CODE • CREATE • CONNECT</span>
+      </span>
+    </a>
+
+    <nav class="navbar__nav" aria-label="Navegação principal">
+     <ul class="navbar__list">
+       <li><a href="#id_turma" class="navbar__link">Início</a></li>
+       <li><a href="#quem_somos" class="navbar__link">Quem Somos</a></li>
+       <li><a href="#integrantes" class="navbar__link">Integrantes</a></li>
+       <li><a href="#mural_turma" class="navbar__link">Mural</a></li>
+        <li><a href="#linha_tempo" class="navbar__link">Percurso</a></li>
+      </ul>
+    </nav>
+
+    <button class="navbar__toggle" aria-label="Abrir menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </header>
 
   <main>
