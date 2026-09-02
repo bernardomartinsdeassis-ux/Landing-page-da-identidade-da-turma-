@@ -1,0 +1,147 @@
+/* ===== Reset básico ===== */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  line-height: 1.6;
+  color: #222;
+  background-color: #fafafa;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ===== Header ===== */
+.site-header {
+  background-color: #1f2937;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.logo {
+  font-size: 1.4rem;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.nav-links a {
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #60a5fa;
+}
+
+/* ===== Seções (main) ===== */
+main section {
+  padding: 70px 0;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: center;
+}
+
+main section h2 {
+  font-size: 1.8rem;
+  color: #1f2937;
+}
+
+/* Identidade da turma */
+.id_turma-section {
+  background-color: #eef2ff;
+   height: 1008px;
+}
+
+/* Quem somos */
+.quem_somos-section {
+  background-color: #ffffff;
+   height: 1008px;
+}
+
+/* Integrantes */
+.integrantes-section {
+  background-color: #f3f4f6;
+   height: 1008px;
+}
+
+/* Mural da turma */
+.mural_turma-section {
+  background-color: #ffffff;
+   height: 1008px;
+}
+
+/* Linha do tempo */
+.linha_tempo-section {
+  background-color: #f3f4f6;
+   height: 1008px;
+}
+
+/* ===== Footer ===== */
+.site-footer {
+  background-color: #1f2937;
+  color: #cbd5e1;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* ===== Responsivo ===== */
+@media (max-width: 600px) {
+  .site-header .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav-links {
+    justify-content: center;
+    gap: 14px;
+  }
+
+  main section h2 {
+    font-size: 1.4rem;
+  }
+
+  main section {
+    padding: 50px 0;
+  }
+}
