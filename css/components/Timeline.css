@@ -1,0 +1,170 @@
+/* ===== SEÇÃO LINHA DO TEMPO ===== */
+
+.linha_tempo-section {
+  background-color: #0d1117;
+  color: #ffffff;
+  padding: 80px 0;
+}
+
+/* ---- Cabeçalho ---- */
+
+.linha_tempo-header {
+  position: relative;
+  margin-bottom: 60px;
+  text-align: left;
+}
+
+.eyebrow {
+  display: block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #4ade80;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.linha_tempo-header h2 {
+  font-size: 48px;
+  font-weight: 800;
+  margin-bottom: 16px;
+  color: #ffffff;
+}
+
+.linha_tempo-description {
+  max-width: 500px;
+  color: #94a3b8;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.linha_tempo-label {
+  position: absolute;
+  right: 0;
+  bottom: 8px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  letter-spacing: 2px;
+  color: #64748b;
+  text-transform: uppercase;
+}
+
+/* linha horizontal abaixo do cabeçalho */
+.linha_tempo-header::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #1e293b;
+  margin-top: 32px;
+}
+
+/* ---- Timeline (lista) ---- */
+
+.timeline {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+}
+
+.timeline-item {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* ---- Marcador (bolinha + label + linha conectora) ---- */
+
+.timeline-marker {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 24px; /* altura fixa: agora sabemos exatamente onde fica o centro */
+}
+
+.timeline-dot {
+  width: 14px;
+  height: 14px;
+  border: 2px solid #4ade80;
+  border-radius: 50%;
+  background-color: #0d1117;
+  z-index: 1;
+}
+
+.timeline-step {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: #cbd5e1;
+  text-transform: uppercase;
+}
+
+/* linha única contínua atrás de todos os marcadores */
+.timeline {
+  position: relative;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 12px; /* metade dos 24px acima — agora bate com o centro real do dot */
+  left: 7px;
+  right: calc(25% - 25px);
+  height: 1px;
+  background-color: #334155;
+  z-index: 0;
+}
+
+.timeline-dot {
+  position: relative;
+  z-index: 1; /* fica por cima da linha, "cortando" ela visualmente */
+}
+
+.timeline-step {
+  position: relative;
+  z-index: 1;
+  background-color: #0d1117; /* mesma cor do fundo da seção, cobre a linha atrás do texto */
+  padding-right: 4px; /* respiro entre o texto e onde a linha reaparece */
+}
+
+/* ---- Cards ---- */
+
+.timeline-card {
+  background-color: #161b22;
+  border: 1px solid #1e293b;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.badge {
+  display: inline-block;
+  align-self: flex-start;
+  background-color: #4ade80;
+  color: #0d1117;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+
+.timeline-card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.timeline-card p {
+  font-size: 14px;
+  color: #94a3b8;
+}
