@@ -1,185 +1,1127 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nossa Turma — Board do Projeto</title>
-<link rel="stylesheet" href="style.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-  
-
-  /* ---------- FOOTER ---------- */
-
-  footer {
-    padding-top: 24px;
-    border-top: 1px solid var(--line);
-    font-size: 13px;
-    color: var(--ink-soft);
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 8px;
-  }
-
-  @media (max-width: 760px) {
-    .hero { grid-template-columns: 1fr; }
-    .wrap { padding: 48px 16px 72px; }
-  }
-
-  @media (max-width: 480px) {
-    .grid { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; }
-    .mural { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 16px; }
-  }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projeto Base</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <div class="wrap">
 
-    <!-- HERO -->
-    <div class="hero">
-      <div class="hero-copy">
-        <div class="eyebrow">
-          <span class="dot"></span>
-          <span class="mono">turma 2026 · projeto em andamento</span>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="logo">Pokéturma SQC1</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#id_turma">Identidade da Turma</a></li>
+          <li><a href="#quem_somos">Quem Somos</a></li>
+          <li><a href="#integrantes">Integrantes</a></li>
+          <li><a href="#mural_turma">Mural da Turma</a></li>
+          <li><a href="#linha_tempo">Linha do Tempo</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section id="id_turma" class="id_turma-section">
+      <div class="container">
+        <h2>IDENTIDADE TURMA</h2>
+        <img src="assets/3e2baf0d-1a1f-42b7-adeb-7b28eb32c263.jpg" alt="logo" class="logo-img">
+      </div>
+    </section>
+
+    <section id="quem_somos" class="quem_somos-section">
+      <div class="container">
+        <h2>CONTAINER QUEM SOMOS</h2>
+      </div>
+    </section>
+
+    <section id="integrantes" class="integrantes-section">
+      <div class="container">
+        <h2>INTEGRANTES</h2>
+        
+        <div class="pokedex-container">
+          <button class="pokedex-nav anterior" type="button">&#10094;</button>
+
+          <div class="pokedex-grid">
+
+            <div class="pokedex">
+              <div class="pokedex-header">
+                <div class="led-principal"></div>
+                <div class="pokedex-luzes">
+                  <span class="luz vermelha"></span>
+                  <span class="luz amarela"></span>
+                  <span class="luz verde"></span>
+                </div>
+
+
+
+                <h3>POKÉTURMA</h3>
+              </div>
+              <div class="pokedex-body">
+                <div class="pokedex-display">
+                  <div class="pokemon-area">
+                    <div class="pokemon-sprite">
+                      <img src="/assets/bernardo.jpg" alt="bernardo" class="foto_aluno">
+                    </div>
+                  </div>
+                  <div class="pokemon-info">
+                    <span class="pokemon-number">Nº 001</span>
+                    <h4>BERNARDO</h4>
+                    <span class="pokemon-type">Developer</span>
+                  </div>
+                </div>
+                <div class="pokedex-controls">
+                  <div class="dpad"><span></span></div>
+                  <div class="central-controls">
+                    <div class="botao-principal"></div>
+                    <div class="botoes-pequenos">
+                      <span></span>
+                      <span></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="pokemon-status">
+                  <div><span>FUNÇÃO</span><strong>FRONT-END</strong></div>
+                  <div><span>HABILIDADES</span><strong>HTML / CSS / JS</strong></div>
+                  <div><span>TIPO</span><strong>CRIATIVO</strong></div>
+                </div>
+              </div>
+            </div>
+            <div class="pokedex">
+              <div class="pokedex-header">
+                <div class="led-principal"></div>
+                <div class="pokedex-luzes">
+                  <span class="luz vermelha"></span>
+                  <span class="luz amarela"></span>
+                  <span class="luz verde"></span>
+                </div>
+
+
+
+                <h3>POKÉTURMA</h3>
+              </div>
+              <div class="pokedex-body">
+                <div class="pokedex-display">
+                  <div class="pokemon-area">
+                    <div class="pokemon-sprite">
+                      <img src="/assets/gus.jpg" alt="gus" class="foto_aluno">
+                    </div>
+                  </div>
+                  <div class="pokemon-info">
+                    <span class="pokemon-number">Nº 002</span>
+                    <h4>GUS</h4>
+                    <span class="pokemon-type">Developer</span>
+                  </div>
+                </div>
+                <div class="pokedex-controls">
+                  <div class="dpad"><span></span></div>
+                  <div class="central-controls">
+                    <div class="botao-principal"></div>
+                    <div class="botoes-pequenos">
+                      <span></span>
+                      <span></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="pokemon-status">
+                  <div><span>FUNÇÃO</span><strong>BACK-END</strong></div>
+                  <div><span>HABILIDADES</span><strong>REACT / NODE</strong></div>
+                  <div><span>TIPO</span><strong>CRIATIVO</strong></div>
+                </div>
+              </div>
+            </div>
+            <div class="pokedex">
+              <div class="pokedex-header">
+                <div class="led-principal"></div>
+                <div class="pokedex-luzes">
+                  <span class="luz vermelha"></span>
+                  <span class="luz amarela"></span>
+                  <span class="luz verde"></span>
+                </div>
+
+
+
+                <h3>POKÉTURMA</h3>
+              </div>
+              <div class="pokedex-body">
+                <div class="pokedex-display">
+                  <div class="pokemon-area">
+                    <div class="pokemon-sprite">
+                      <img src="/assets/mateus.jpg" alt="mateus" class="foto_aluno">
+                    </div>
+                  </div>
+                  <div class="pokemon-info">
+                    <span class="pokemon-number">Nº 003</span>
+                    <h4>MATEUS</h4>
+                    <span class="pokemon-type">Designer</span>
+                  </div>
+                </div>
+                <div class="pokedex-controls">
+                  <div class="dpad"><span></span></div>
+                  <div class="central-controls">
+                    <div class="botao-principal"></div>
+                    <div class="botoes-pequenos">
+                      <span></span>
+                      <span></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="pokemon-status">
+                  <div><span>FUNÇÃO</span><strong>DESIGN</strong></div>
+                  <div><span>HABILIDADES</span><strong>UI / UX</strong></div>
+                  <div><span>TIPO</span><strong>CRIATIVO</strong></div>
+                </div>
+              </div>
+            </div>
+            <div class="pokedex">
+              <div class="pokedex-header">
+                <div class="led-principal"></div>
+                <div class="pokedex-luzes">
+                  <span class="luz vermelha"></span>
+                  <span class="luz amarela"></span>
+                  <span class="luz verde"></span>
+                </div>
+
+
+                
+                <h3>POKÉTURMA</h3>
+              </div>
+              <div class="pokedex-body">
+                <div class="pokedex-display">
+                  <div class="pokemon-area">
+                    <div class="pokemon-sprite">
+                      <img src="/assets/adriano.jpg" alt="mateus" class="foto_aluno">
+                    </div>
+                  </div>
+                  <div class="pokemon-info">
+                    <span class="pokemon-number">Nº 004</span>
+                    <h4>ADRIANO</h4>
+                    <span class="pokemon-type">Designer</span>
+                  </div>
+                </div>
+                <div class="pokedex-controls">
+                  <div class="dpad"><span></span></div>
+                  <div class="central-controls">
+                    <div class="botao-principal"></div>
+                    <div class="botoes-pequenos">
+                      <span></span>
+                      <span></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="pokemon-status">
+                  <div><span>FUNÇÃO</span><strong>DESIGN</strong></div>
+                  <div><span>HABILIDADES</span><strong>UI / UX</strong></div>
+                  <div><span>TIPO</span><strong>CRIATIVO</strong></div>
+                </div>
+              </div>
+            </div>
+            <div class="pokedex">
+            <div class="pokedex-header">
+              <div class="led-principal"></div>
+              <div class="pokedex-luzes">
+                <span class="luz vermelha"></span>
+                <span class="luz amarela"></span>
+                <span class="luz verde"></span>
+              </div>
+
+
+
+              <h3>POKÉTURMA</h3>
+            </div>
+            <div class="pokedex-body">
+              <div class="pokedex-display">
+                <div class="pokemon-area">
+                  <div class="pokemon-sprite">
+                    <img src="/boilerplate_fullstack/assets/sua_foto.jpg" alt="nome" class="foto_aluno">
+                  </div>
+                </div>
+                <div class="pokemon-info">
+                  <span class="pokemon-number">Nº 005</span>
+                  <h4>RAFAEL</h4>
+                  <span class="pokemon-type">Developer</span>
+                </div>
+              </div>
+              <div class="pokedex-controls">
+                <div class="dpad"><span></span></div>
+                <div class="central-controls">
+                  <div class="botao-principal"></div>
+                  <div class="botoes-pequenos">
+                    <span></span>
+                    <span></span>
+                  </div>
+                </div>
+              </div>
+              <div class="pokemon-status">
+                <div><span>FUNÇÃO</span><strong>FULLSTACK</strong></div>
+                <div><span>HABILIDADES</span><strong>JS / REACT</strong></div>
+                <div><span>TIPO</span><strong>CRIATIVO</strong></div>
+              </div>
+            </div>
+          </div>
+          <div class="pokedex">
+          <div class="pokedex-header">
+            <div class="led-principal"></div>
+            <div class="pokedex-luzes">
+              <span class="luz vermelha"></span>
+              <span class="luz amarela"></span>
+              <span class="luz verde"></span>
+            </div>
+
+
+
+            <h3>POKÉTURMA</h3>
+          </div>
+          <div class="pokedex-body">
+            <div class="pokedex-display">
+              <div class="pokemon-area">
+                <div class="pokemon-sprite">
+                  <img src="/assets/haru.jpg" alt="nome" class="foto_aluno">
+                </div>
+              </div>
+              <div class="pokemon-info">
+                <span class="pokemon-number">Nº 006</span>
+                <h4>HARU</h4>
+                <span class="pokemon-type">Developer</span>
+              </div>
+            </div>
+            <div class="pokedex-controls">
+              <div class="dpad"><span></span></div>
+              <div class="central-controls">
+                <div class="botao-principal"></div>
+                <div class="botoes-pequenos">
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+            </div>
+            <div class="pokemon-status">
+              <div><span>FUNÇÃO</span><strong>FULLSTACK</strong></div>
+              <div><span>HABILIDADES</span><strong>JS / REACT</strong></div>
+              <div><span>TIPO</span><strong>CRIATIVO</strong></div>
+            </div>
+          </div>
         </div>
-        <h1>slogan da turma <span class="edit">(edite aqui)</span></h1>
-        <p>Espaço para a frase que representa o grupo — construído com liberdade e responsabilidade, sprint após sprint.</p>
-      </div>
-      <div class="hero-art">
-        <svg viewBox="0 0 320 220" xmlns="http://www.w3.org/2000/svg">
-          <rect x="8" y="8" width="90" height="204" rx="10" fill="#f7f8fa" stroke="#d7dbe2"/>
-          <rect x="115" y="8" width="90" height="204" rx="10" fill="#f7f8fa" stroke="#d7dbe2"/>
-          <rect x="222" y="8" width="90" height="204" rx="10" fill="#f7f8fa" stroke="#d7dbe2"/>
-
-          <rect x="18" y="24" width="70" height="34" rx="6" fill="#f2b134" opacity="0.85"/>
-          <rect x="18" y="66" width="70" height="34" rx="6" fill="#2f8fd1" opacity="0.85"/>
-          <rect x="18" y="108" width="70" height="34" rx="6" fill="#34a771" opacity="0.85"/>
-
-          <rect x="125" y="24" width="70" height="34" rx="6" fill="#b56de0" opacity="0.85"/>
-          <rect x="125" y="66" width="70" height="34" rx="6" fill="#f2b134" opacity="0.85"/>
-
-          <rect x="232" y="24" width="70" height="34" rx="6" fill="#34a771" opacity="0.85"/>
-          <rect x="232" y="66" width="70" height="34" rx="6" fill="#2f8fd1" opacity="0.85"/>
-          <rect x="232" y="108" width="70" height="34" rx="6" fill="#f2b134" opacity="0.85"/>
-          <rect x="232" y="150" width="70" height="34" rx="6" fill="#b56de0" opacity="0.85"/>
-        </svg>
-      </div>
+        <div class="pokedex">
+  <div class="pokedex-header">
+    <div class="led-principal"></div>
+    <div class="pokedex-luzes">
+      <span class="luz vermelha"></span>
+      <span class="luz amarela"></span>
+      <span class="luz verde"></span>
     </div>
 
-    <!-- TIMELINE / PERCURSO -->
-    <section>
-      <div class="section-head">
-        <div>
-          <h2>Percurso</h2>
-          <p class="lede">Conteúdos, desafios, experiências e marcos que a turma considera relevantes até aqui.</p>
-        </div>
-        <span class="tag mono">linha do tempo</span>
-      </div>
-      <div class="timeline" id="timeline"></div>
-    </section>
 
-    <!-- MURAL DE FRASES -->
-    <section>
-      <div class="section-head">
-        <div>
-          <h2>Mural da turma</h2>
-          <p class="lede">Uma frase por integrante — um aprendizado, uma descoberta, o que quiser marcar.</p>
-        </div>
-        <span class="tag mono">20 vozes</span>
-      </div>
-      <div class="mural" id="muralGrid"></div>
-    </section>
 
-    <!-- TEAM BOARD -->
-    <section>
-      <div class="section-head">
-        <div>
-          <h2>Equipe</h2>
-          <p class="lede">Quem faz o quê — organização e papéis definidos pela própria turma.</p>
-        </div>
-        <span class="tag mono">20 cards · board</span>
-      </div>
-      <div class="grid" id="cardGrid"></div>
-    </section>
-
-    <footer>
-      <span>Edite frases, marcos, nomes e funções no HTML — a estrutura é só o ponto de partida.</span>
-      <span class="mono">20/20 vagas</span>
-    </footer>
+    <h3>POKÉTURMA</h3>
   </div>
-
-  <script>
-    // ---------- PERCURSO: edite/adicione paradas livremente ----------
-    // type: 'conteudo' | 'desafio' | 'experiencia' | 'marco'
-    const typeMeta = {
-      conteudo:   { label: 'conteúdo',    color: 'var(--tag-b)' },
-      desafio:    { label: 'desafio',     color: 'var(--tag-a)' },
-      experiencia:{ label: 'experiência', color: 'var(--tag-d)' },
-      marco:      { label: 'marco',       color: 'var(--tag-c)' },
-    };
-
-    const stops = [
-      { date: 'semana 1', type: 'marco',       title: 'Formação da turma', desc: 'primeiro encontro e definição de como vamos trabalhar' },
-      { date: 'semana 2', type: 'conteudo',     title: 'nome do conteúdo', desc: 'o que foi estudado nessa etapa' },
-      { date: 'semana 3', type: 'desafio',      title: 'nome do desafio', desc: 'o que travou e como foi superado' },
-      { date: 'semana 4', type: 'experiencia',  title: 'nome da experiência', desc: 'algo vivido em grupo que marcou a turma' },
-      { date: 'semana 5', type: 'conteudo',     title: 'nome do conteúdo', desc: 'o que foi estudado nessa etapa' },
-      { date: 'semana 6', type: 'marco',        title: 'nome do marco', desc: 'uma entrega ou conquista importante' },
-    ];
-
-    const timeline = document.getElementById('timeline');
-    stops.forEach(s => {
-      const meta = typeMeta[s.type];
-      const el = document.createElement('div');
-      el.className = 'stop';
-      el.innerHTML = `
-        <div class="stop-node" style="--dot:${meta.color}">
-          <span class="ring"></span>
-          <span class="date mono">${s.date}</span>
+  <div class="pokedex-body">
+    <div class="pokedex-display">
+      <div class="pokemon-area">
+        <div class="pokemon-sprite">
+          <img src="/assets/sua_foto.jpg" alt="nome" class="foto_aluno">
         </div>
-        <div class="stop-body">
-          <span class="type-tag mono" style="background:${meta.color}">${meta.label}</span>
-          <div class="title">${s.title}</div>
-          <div class="desc">${s.desc}</div>
+      </div>
+      <div class="pokemon-info">
+        <span class="pokemon-number">Nº 007</span>
+        <h4>~~LR</h4>
+        <span class="pokemon-type">Developer</span>
+      </div>
+    </div>
+    <div class="pokedex-controls">
+      <div class="dpad"><span></span></div>
+      <div class="central-controls">
+        <div class="botao-principal"></div>
+        <div class="botoes-pequenos">
+          <span></span>
+          <span></span>
         </div>
-      `;
-      timeline.appendChild(el);
-    });
+      </div>
+    </div>
+    <div class="pokemon-status">
+      <div><span>FUNÇÃO</span><strong>FULLSTACK</strong></div>
+      <div><span>HABILIDADES</span><strong>JS / REACT</strong></div>
+      <div><span>TIPO</span><strong>CRIATIVO</strong></div>
+    </div>
+  </div>
+</div>
+<div class="pokedex">
+  <div class="pokedex-header">
+    <div class="led-principal"></div>
+    <div class="pokedex-luzes">
+      <span class="luz vermelha"></span>
+      <span class="luz amarela"></span>
+      <span class="luz verde"></span>
+    </div>
 
-    // ---------- MURAL: 20 frases, uma por pessoa ----------
-    const noteColors = ['#fff6d8', '#dbeeff', '#e3f7ea', '#f3e6fb'];
-    const rotations = [-3, 2, -1, 3, -2];
-    const mural = document.getElementById('muralGrid');
-    for (let i = 1; i <= 20; i++) {
-      const note = document.createElement('div');
-      note.className = 'note';
-      note.style.setProperty('--note-color', noteColors[i % noteColors.length]);
-      note.style.setProperty('--r', rotations[i % rotations.length] + 'deg');
-      note.innerHTML = `
-        <div class="quote">"sua frase — um aprendizado ou descoberta"</div>
-        <div class="signee mono">— nome</div>
-      `;
-      mural.appendChild(note);
-    }
 
-    // ---------- EQUIPE: 20 cards com função ----------
-    const tagColors = ['var(--tag-a)', 'var(--tag-b)', 'var(--tag-c)', 'var(--tag-d)'];
-    const grid = document.getElementById('cardGrid');
-    for (let i = 1; i <= 20; i++) {
-      const color = tagColors[i % tagColors.length];
-      const card = document.createElement('div');
-      card.className = 'card';
-      card.style.borderLeftColor = color;
-      card.innerHTML = `
-        <span class="ticket-id mono">#${String(i).padStart(2, '0')}</span>
-        <div class="photo-slot">foto</div>
-        <div class="name">nome</div>
-        <span class="role-tag mono" style="background:${color}">função</span>
-      `;
-      grid.appendChild(card);
-    }
-  </script>
+    <h3>POKÉTURMA</h3>
+  </div>
+  <div class="pokedex-body">
+    <div class="pokedex-display">
+      <div class="pokemon-area">
+        <div class="pokemon-sprite">
+          <img src="/assets/antonio.jpg" alt="nome" class="foto_aluno">
+        </div>
+      </div>
+      <div class="pokemon-info">
+        <span class="pokemon-number">Nº 008</span>
+        <h4>ANTÔNIO</h4>
+        <span class="pokemon-type">Eletronica</span>
+      </div>
+    </div>
+    <div class="pokedex-controls">
+      <div class="dpad"><span></span></div>
+      <div class="central-controls">
+        <div class="botao-principal"></div>
+        <div class="botoes-pequenos">
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+    <div class="pokemon-status">
+      <div><span>FUNÇÃO</span><strong>CELULAR</strong></div>
+      <div><span>HABILIDADES</span><strong> MOBILLE </strong></div>
+      <div><span>TIPO</span><strong>CRIATIVO</strong></div>
+    </div>
+  </div>
+</div>
+<div class="pokedex">
+  <div class="pokedex-header">
+    <div class="led-principal"></div>
+    <div class="pokedex-luzes">
+      <span class="luz vermelha"></span>
+      <span class="luz amarela"></span>
+      <span class="luz verde"></span>
+    </div>
+
+
+
+    <h3>POKÉTURMA</h3>
+  </div>
+  <div class="pokedex-body">
+    <div class="pokedex-display">
+      <div class="pokemon-area">
+        <div class="pokemon-sprite">
+          <img src="/assets/sua_foto.jpg" alt="nome" class="foto_aluno">
+        </div>
+      </div>
+      <div class="pokemon-info">
+        <span class="pokemon-number">Nº 009</span>
+        <h4>BRUNA</h4>
+        <span class="pokemon-type">Developer</span>
+      </div>
+    </div>
+    <div class="pokedex-controls">
+      <div class="dpad"><span></span></div>
+      <div class="central-controls">
+        <div class="botao-principal"></div>
+        <div class="botoes-pequenos">
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+    <div class="pokemon-status">
+      <div><span>FUNÇÃO</span><strong>FULLSTACK</strong></div>
+      <div><span>HABILIDADES</span><strong>JS / REACT</strong></div>
+      <div><span>TIPO</span><strong>CRIATIVO</strong></div>
+    </div>
+  </div>
+</div>
+<div class="pokedex">
+  <div class="pokedex-header">
+    <div class="led-principal"></div>
+    <div class="pokedex-luzes">
+      <span class="luz vermelha"></span>
+      <span class="luz amarela"></span>
+      <span class="luz verde"></span>
+    </div>
+
+
+
+    <h3>POKÉTURMA</h3>
+  </div>
+  <div class="pokedex-body">
+    <div class="pokedex-display">
+      <div class="pokemon-area">
+        <div class="pokemon-sprite">
+          <img src="/assets/eduardo_m.jpg" alt="nome" class="foto_aluno">
+        </div>
+      </div>
+      <div class="pokemon-info">
+        <span class="pokemon-number">Nº 010</span>
+        <h4>EDUARDO M</h4>
+        <span class="pokemon-type">Developer</span>
+      </div>
+    </div>
+    <div class="pokedex-controls">
+      <div class="dpad"><span></span></div>
+      <div class="central-controls">
+        <div class="botao-principal"></div>
+        <div class="botoes-pequenos">
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+    <div class="pokemon-status">
+      <div><span>FUNÇÃO</span><strong>FULLSTACK</strong></div>
+      <div><span>HABILIDADES</span><strong>JS / REACT</strong></div>
+      <div><span>TIPO</span><strong>CRIATIVO</strong></div>
+    </div>
+  </div>
+</div>
+<div class="pokedex">
+  <div class="pokedex-header">
+    <div class="led-principal"></div>
+    <div class="pokedex-luzes">
+      <span class="luz vermelha"></span>
+      <span class="luz amarela"></span>
+      <span class="luz verde"></span>
+    </div>
+
+    <h3>POKÉTURMA</h3>
+  </div>
+  <div class="pokedex-body">
+    <div class="pokedex-display">
+      <div class="pokemon-area">
+        <div class="pokemon-sprite">
+          <img src="/assets/sua_foto.jpg" alt="nome" class="foto_aluno">
+        </div>
+      </div>
+      <div class="pokemon-info">
+        <span class="pokemon-number">Nº 0011</span>
+        <h4>NICOLAS G</h4>
+        <span class="pokemon-type">Developer</span>
+      </div>
+    </div>
+    <div class="pokedex-controls">
+      <div class="dpad"><span></span></div>
+      <div class="central-controls">
+        <div class="botao-principal"></div>
+        <div class="botoes-pequenos">
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+    <div class="pokemon-status">
+      <div><span>FUNÇÃO</span><strong>FULLSTACK</strong></div>
+      <div><span>HABILIDADES</span><strong>JS / REACT</strong></div>
+      <div><span>TIPO</span><strong>CRIATIVO</strong></div>
+    </div>
+  </div>
+</div>
+<div class="pokedex">
+  <div class="pokedex-header">
+    <div class="led-principal"></div>
+    <div class="pokedex-luzes">
+      <span class="luz vermelha"></span>
+      <span class="luz amarela"></span>
+      <span class="luz verde"></span>
+    </div>
+
+
+
+    <h3>POKÉTURMA</h3>
+  </div>
+  <div class="pokedex-body">
+    <div class="pokedex-display">
+      <div class="pokemon-area">
+        <div class="pokemon-sprite">
+          <img src="/assets/monicke.jpg" alt="nome" class="foto_aluno">
+        </div>
+      </div>
+      <div class="pokemon-info">
+        <span class="pokemon-number">Nº 012</span>
+        <h4>MONICKE</h4>
+        <span class="pokemon-type">Developer</span>
+      </div>
+    </div>
+    <div class="pokedex-controls">
+      <div class="dpad"><span></span></div>
+      <div class="central-controls">
+        <div class="botao-principal"></div>
+        <div class="botoes-pequenos">
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+    <div class="pokemon-status">
+      <div><span>FUNÇÃO</span><strong>FULLSTACK</strong></div>
+      <div><span>HABILIDADES</span><strong>JS / REACT</strong></div>
+      <div><span>TIPO</span><strong>CRIATIVO</strong></div>
+    </div>
+  </div>
+</div>
+<div class="pokedex">
+  <div class="pokedex-header">
+    <div class="led-principal"></div>
+    <div class="pokedex-luzes">
+      <span class="luz vermelha"></span>
+      <span class="luz amarela"></span>
+      <span class="luz verde"></span>
+    </div>
+    <h3>POKÉTURMA</h3>
+  </div>
+  <div class="pokedex-body">
+    <div class="pokedex-display">
+      <div class="pokemon-area">
+        <div class="pokemon-sprite">
+          <img src="/assets/sua_foto.jpg" alt="nome" class="foto_aluno">
+        </div>
+      </div>
+      <div class="pokemon-info">
+        <span class="pokemon-number">Nº 013</span>
+        <h4>GABRIEL</h4>
+        <span class="pokemon-type">Developer</span>
+      </div>
+    </div>
+    <div class="pokedex-controls">
+      <div class="dpad"><span></span></div>
+      <div class="central-controls">
+        <div class="botao-principal"></div>
+        <div class="botoes-pequenos">
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+    <div class="pokemon-status">
+      <div><span>FUNÇÃO</span><strong>FULLSTACK</strong></div>
+      <div><span>HABILIDADES</span><strong>JS / REACT</strong></div>
+      <div><span>TIPO</span><strong>CRIATIVO</strong></div>
+    </div>
+  </div>
+</div>
+<div class="pokedex">
+  <div class="pokedex-header">
+    <div class="led-principal"></div>
+    <div class="pokedex-luzes">
+      <span class="luz vermelha"></span>
+      <span class="luz amarela"></span>
+      <span class="luz verde"></span>
+    </div>
+
+
+
+    <h3>POKÉTURMA</h3>
+  </div>
+  <div class="pokedex-body">
+    <div class="pokedex-display">
+      <div class="pokemon-area">
+        <div class="pokemon-sprite">
+          <img src="/assets/nicolas_a.jpg" alt="nome" class="foto_aluno">
+        </div>
+      </div>
+      <div class="pokemon-info">
+        <span class="pokemon-number">Nº 014</span>
+        <h4>NICOLAS A</h4>
+        <span class="pokemon-type">Developer</span>
+      </div>
+    </div>
+    <div class="pokedex-controls">
+      <div class="dpad"><span></span></div>
+      <div class="central-controls">
+        <div class="botao-principal"></div>
+        <div class="botoes-pequenos">
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+    <div class="pokemon-status">
+      <div><span>FUNÇÃO</span><strong>FULLSTACK</strong></div>
+      <div><span>HABILIDADES</span><strong>JS / REACT</strong></div>
+      <div><span>TIPO</span><strong>CRIATIVO</strong></div>
+    </div>
+  </div>
+</div>
+<div class="pokedex">
+  <div class="pokedex-header">
+    <div class="led-principal"></div>
+    <div class="pokedex-luzes">
+      <span class="luz vermelha"></span>
+      <span class="luz amarela"></span>
+      <span class="luz verde"></span>
+    </div>
+
+
+
+    <h3>POKÉTURMA</h3>
+  </div>
+  <div class="pokedex-body">
+    <div class="pokedex-display">
+      <div class="pokemon-area">
+        <div class="pokemon-sprite">
+          <img src="/assets/leonardo.jpg" alt="nome" class="foto_aluno">
+        </div>
+      </div>
+      <div class="pokemon-info">
+        <span class="pokemon-number">Nº 016</span>
+        <h4>LEONARDO M</h4>
+        <span class="pokemon-type">Developer</span>
+      </div>
+    </div>
+    <div class="pokedex-controls">
+      <div class="dpad"><span></span></div>
+      <div class="central-controls">
+        <div class="botao-principal"></div>
+        <div class="botoes-pequenos">
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+    <div class="pokemon-status">
+      <div><span>FUNÇÃO</span><strong>FULLSTACK</strong></div>
+      <div><span>HABILIDADES</span><strong>JS / REACT</strong></div>
+      <div><span>TIPO</span><strong>CRIATIVO</strong></div>
+    </div>
+  </div>
+</div>
+<div class="pokedex">
+  <div class="pokedex-header">
+    <div class="led-principal"></div>
+    <div class="pokedex-luzes">
+      <span class="luz vermelha"></span>
+      <span class="luz amarela"></span>
+      <span class="luz verde"></span>
+    </div>
+    <h3>POKÉTURMA</h3>
+  </div>
+  <div class="pokedex-body">
+    <div class="pokedex-display">
+      <div class="pokemon-area">
+        <div class="pokemon-sprite">
+          <img src="/assets/colega.jpg" alt="nome" class="foto_aluno">
+        </div>
+      </div>
+      <div class="pokemon-info">
+        <span class="pokemon-number">Nº 0017</span>
+        <h4>RAUL</h4>
+        <span class="pokemon-type">Developer</span>
+      </div>
+    </div>
+    <div class="pokedex-controls">
+      <div class="dpad"><span></span></div>
+      <div class="central-controls">
+        <div class="botao-principal"></div>
+        <div class="botoes-pequenos">
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+    <div class="pokemon-status">
+      <div><span>FUNÇÃO</span><strong>FULLSTACK</strong></div>
+      <div><span>HABILIDADES</span><strong>JS / REACT</strong></div>
+      <div><span>TIPO</span><strong>CRIATIVO</strong></div>
+    </div>
+  </div>
+</div>
+<div class="pokedex">
+  <div class="pokedex-header">
+    <div class="led-principal"></div>
+    <div class="pokedex-luzes">
+      <span class="luz vermelha"></span>
+      <span class="luz amarela"></span>
+      <span class="luz verde"></span>
+    </div>
+
+
+    <h3>POKÉTURMA</h3>
+  </div>
+  <div class="pokedex-body">
+    <div class="pokedex-display">
+      <div class="pokemon-area">
+        <div class="pokemon-sprite">
+          <img src="/assets/lucas.jpg" alt="nome" class="foto_aluno">
+        </div>
+      </div>
+      <div class="pokemon-info">
+        <span class="pokemon-number">Nº 018</span>
+        <h4>LUCAS R</h4>
+        <span class="pokemon-type">Developer</span>
+      </div>
+    </div>
+    <div class="pokedex-controls">
+      <div class="dpad"><span></span></div>
+      <div class="central-controls">
+        <div class="botao-principal"></div>
+        <div class="botoes-pequenos">
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+    <div class="pokemon-status">
+      <div><span>FUNÇÃO</span><strong>FULLSTACK</strong></div>
+      <div><span>HABILIDADES</span><strong>JS / REACT</strong></div>
+      <div><span>TIPO</span><strong>CRIATIVO</strong></div>
+    </div>
+  </div>
+</div>
+<div class="pokedex">
+  <div class="pokedex-header">
+    <div class="led-principal"></div>
+    <div class="pokedex-luzes">
+      <span class="luz vermelha"></span>
+      <span class="luz amarela"></span>
+      <span class="luz verde"></span>
+    </div>
+
+
+
+    <h3>POKÉTURMA</h3>
+  </div>
+  <div class="pokedex-body">
+    <div class="pokedex-display">
+      <div class="pokemon-area">
+        <div class="pokemon-sprite">
+          <img src="/assets/edu.jpg" alt="nome" class="foto_aluno">
+        </div>
+      </div>
+      <div class="pokemon-info">
+        <span class="pokemon-number">Nº 019</span>
+        <h4>EDU</h4>
+        <span class="pokemon-type">Developer</span>
+      </div>
+    </div>
+    <div class="pokedex-controls">
+      <div class="dpad"><span></span></div>
+      <div class="central-controls">
+        <div class="botao-principal"></div>
+        <div class="botoes-pequenos">
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+    <div class="pokemon-status">
+      <div><span>FUNÇÃO</span><strong>FULLSTACK</strong></div>
+      <div><span>HABILIDADES</span><strong>JS / REACT</strong></div>
+      <div><span>TIPO</span><strong>CRIATIVO</strong></div>
+    </div>
+  </div>
+</div>
+<div class="pokedex">
+  <div class="pokedex-header">
+    <div class="led-principal"></div>
+    <div class="pokedex-luzes">
+      <span class="luz vermelha"></span>
+      <span class="luz amarela"></span>
+      <span class="luz verde"></span>
+    </div>
+
+
+
+    <h3>POKÉTURMA</h3>
+  </div>
+  <div class="pokedex-body">
+    <div class="pokedex-display">
+      <div class="pokemon-area">
+        <div class="pokemon-sprite">
+          <img src="/assets/mariana.jpg" alt="nome" class="foto_aluno">
+        </div>
+      </div>
+      <div class="pokemon-info">
+        <span class="pokemon-number">Nº 005</span>
+        <h4>MARIANA</h4>
+        <span class="pokemon-type">Developer</span>
+      </div>
+    </div>
+    <div class="pokedex-controls">
+      <div class="dpad"><span></span></div>
+      <div class="central-controls">
+        <div class="botao-principal"></div>
+        <div class="botoes-pequenos">
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+    <div class="pokemon-status">
+      <div><span>FUNÇÃO</span><strong>FULLSTACK</strong></div>
+      <div><span>HABILIDADES</span><strong>JS / REACT</strong></div>
+      <div><span>TIPO</span><strong>CRIATIVO</strong></div>
+    </div>
+  </div>
+</div>
+<div class="pokedex">
+  <div class="pokedex-header">
+    <div class="led-principal"></div>
+    <div class="pokedex-luzes">
+      <span class="luz vermelha"></span>
+      <span class="luz amarela"></span>
+      <span class="luz verde"></span>
+    </div>
+
+
+
+    <h3>POKÉTURMA</h3>
+  </div>
+  <div class="pokedex-body">
+    <div class="pokedex-display">
+      <div class="pokemon-area">
+        <div class="pokemon-sprite">
+          <img src="/assets/marlon.jpg" alt="nome" class="foto_aluno">
+        </div>
+      </div>
+      <div class="pokemon-info">
+        <span class="pokemon-number">Nº 019</span>
+        <h4>Marlon</h4>
+        <span class="pokemon-type">Developer</span>
+      </div>
+    </div>
+    <div class="pokedex-controls">
+      <div class="dpad"><span></span></div>
+      <div class="central-controls">
+        <div class="botao-principal"></div>
+        <div class="botoes-pequenos">
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+    <div class="pokemon-status">
+      <div><span>FUNÇÃO</span><strong>FULLSTACK</strong></div>
+      <div><span>HABILIDADES</span><strong>JS / REACT</strong></div>
+      <div><span>TIPO</span><strong>CRIATIVO</strong></div>
+    </div>
+  </div>
+</div>
+<div class="pokedex">
+  <div class="pokedex-header">
+    <div class="led-principal"></div>
+    <div class="pokedex-luzes">
+      <span class="luz vermelha"></span>
+      <span class="luz amarela"></span>
+      <span class="luz verde"></span>
+    </div>
+
+
+    <h3>POKÉTURMA</h3>
+  </div>
+  <div class="pokedex-body">
+    <div class="pokedex-display">
+      <div class="pokemon-area">
+        <div class="pokemon-sprite">
+          <img src="/assets/vargas.jpg" alt="nome" class="foto_aluno">
+        </div>
+      </div>
+      <div class="pokemon-info">
+        <span class="pokemon-number">Nº 020</span>
+        <h4>VARGAS</h4>
+        <span class="pokemon-type">Developer</span>
+      </div>
+    </div>
+    <div class="pokedex-controls">
+      <div class="dpad"><span></span></div>
+      <div class="central-controls">
+        <div class="botao-principal"></div>
+        <div class="botoes-pequenos">
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+    <div class="pokemon-status">
+      <div><span>FUNÇÃO</span><strong>FULLSTACK</strong></div>
+      <div><span>HABILIDADES</span><strong>JS / REACT</strong></div>
+      <div><span>TIPO</span><strong>CRIATIVO</strong></div>
+    </div>
+  </div>
+</div>
+<div class="pokedex">
+  <div class="pokedex-header">
+    <div class="led-principal"></div>
+    <div class="pokedex-luzes">
+      <span class="luz vermelha"></span>
+      <span class="luz amarela"></span>
+      <span class="luz verde"></span>
+    </div>
+
+
+
+    <h3>POKÉTURMA</h3>
+  </div>
+  <div class="pokedex-body">
+    <div class="pokedex-display">
+      <div class="pokemon-area">
+        <div class="pokemon-sprite">
+          <img src="/assets/sua_foto.jpg" alt="nome" class="foto_aluno">
+        </div>
+      </div>
+      <div class="pokemon-info">
+        <span class="pokemon-number">Nº 021</span>
+        <h4>ISABELA</h4>
+        <span class="pokemon-type">Developer</span>
+      </div>
+    </div>
+    <div class="pokedex-controls">
+      <div class="dpad"><span></span></div>
+      <div class="central-controls">
+        <div class="botao-principal"></div>
+        <div class="botoes-pequenos">
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+    <div class="pokemon-status">
+      <div><span>FUNÇÃO</span><strong>FULLSTACK</strong></div>
+      <div><span>HABILIDADES</span><strong>JS / REACT</strong></div>
+      <div><span>TIPO</span><strong>CRIATIVO</strong></div>
+    </div>
+  </div>
+</div>
+<div class="pokedex">
+  <div class="pokedex-header">
+    <div class="led-principal"></div>
+    <div class="pokedex-luzes">
+      <span class="luz vermelha"></span>
+      <span class="luz amarela"></span>
+      <span class="luz verde"></span>
+    </div>
+
+
+
+    <h3>POKÉTURMA</h3>
+  </div>
+  <div class="pokedex-body">
+    <div class="pokedex-display">
+      <div class="pokemon-area">
+        <div class="pokemon-sprite">
+          <img src="/assets/sua_foto.jpg" alt="nome" class="foto_aluno">
+        </div>
+      </div>
+      <div class="pokemon-info">
+        <span class="pokemon-number">Nº 022</span>
+        <h4>LARISSA</h4>
+        <span class="pokemon-type">Developer</span>
+      </div>
+    </div>
+    <div class="pokedex-controls">
+      <div class="dpad"><span></span></div>
+      <div class="central-controls">
+        <div class="botao-principal"></div>
+        <div class="botoes-pequenos">
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+    <div class="pokemon-status">
+      <div><span>FUNÇÃO</span><strong>FULLSTACK</strong></div>
+      <div><span>HABILIDADES</span><strong>JS / REACT</strong></div>
+      <div><span>TIPO</span><strong>CRIATIVO</strong></div>
+    </div>
+  </div>
+</div>
+
+
+          </div> <button class="pokedex-nav proximo" type="button">&#10095;</button>
+        </div> </div>
+    </section>
+
+    <section id="mural_turma" class="mural_turma-section">
+      <div class="container">
+        <h2>CONTAINER MURAL DA TURMA</h2>
+      </div>
+    </section>
+
+  <section id="linha_tempo" class="linha_tempo-section">
+  <div class="container">
+    <h2>LINHA DO TEMPO</h2>
+    <p class="pokeball-instruction">Clique nas Pokébolas para revelar os projetos!</p>
+    
+    <!-- GRID COM 3 POKÉBOLAS -->
+    <div class="pokeball-grid">
+
+      <!-- POKÉBOLA 1 -->
+      <div class="pokeball-item">
+        <div class="pokeball" data-target="fase-1" role="button" tabindex="0">
+          <div class="pokeball-top"></div>
+          <div class="pokeball-middle">
+            <div class="pokeball-button"></div>
+          </div>
+          <div class="pokeball-bottom"></div>
+        </div>
+        <span class="pokeball-label">Projeto 1</span>
+      </div>
+
+      <!-- POKÉBOLA 2 -->
+      <div class="pokeball-item">
+        <div class="pokeball" data-target="fase-2" role="button" tabindex="0">
+          <div class="pokeball-top"></div>
+          <div class="pokeball-middle">
+            <div class="pokeball-button"></div>
+          </div>
+          <div class="pokeball-bottom"></div>
+        </div>
+        <span class="pokeball-label">Projeto 2</span>
+      </div>
+
+      <!-- POKÉBOLA 3 -->
+      <div class="pokeball-item">
+        <div class="pokeball" data-target="fase-3" role="button" tabindex="0">
+          <div class="pokeball-top"></div>
+          <div class="pokeball-middle">
+            <div class="pokeball-button"></div>
+          </div>
+          <div class="pokeball-bottom"></div>
+        </div>
+        <span class="pokeball-label">Projeto 3</span>
+      </div>
+
+    </div> <!-- /.pokeball-grid -->
+
+    <!-- ÁREA DOS CARDS DE CONTEÚDO -->
+    <div class="timeline-container">
+      
+      <!-- CARD FASE 1 -->
+      <div class="timeline-card escondido" id="fase-1">
+        <span class="badge-fase">Banco de dados</span>
+        <h3>Concepção & Planejamento</h3>
+        <p>Criação de um banco de dados de inserir usuarios em um banco de dados relacional (postgre) </p>
+      </div>
+
+      <!-- CARD FASE 2 -->
+      <div class="timeline-card escondido" id="fase-2">
+        <span class="badge-fase">Back-end</span>
+        <h3>Captador de golpes virtuais </h3>
+        <p>Criação de um código em JAVA com objetivo de filtrar as mensagens recebidas como golpe, suspeito ou seguro</p>
+      </div>
+
+      <!-- CARD FASE 3 -->
+      <div class="timeline-card escondido" id="fase-3">
+        <span class="badge-fase">front-end</span>
+        <h3>WebPortifolio</h3>
+        <p>Criação de portifolios individuais de cada um, contendo suas informações como um CV e então vender seu peixe para turma!</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="ano"></span> Meu Projeto. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
 </body>
 </html>
