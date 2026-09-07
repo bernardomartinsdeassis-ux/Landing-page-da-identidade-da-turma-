@@ -29,7 +29,6 @@
   text-align: left;
 }
 
-/* Malha discreta semelhante à referência */
 .quem_somos-section::before {
   content: "";
   position: absolute;
