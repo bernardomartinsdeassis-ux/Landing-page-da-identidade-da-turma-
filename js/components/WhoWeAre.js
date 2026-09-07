@@ -8,7 +8,7 @@ export function renderWhoWeAre() {
       <div class="container quem-somos-container">
 
         <header class="quem-somos-header">
-          <span class="quem-somos-label">01 / QUEM SOMOS</span>
+          <span class="quem-somos-label">02 / QUEM SOMOS</span>
 
           <h2 id="titulo-quem-somos" class="titulo-quem-somos">
             Pessoas diferentes.
@@ -32,17 +32,16 @@ export function renderWhoWeAre() {
               <h3>Nossa turma</h3>
 
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Phasellus dapibus euismod erat, quis facilisis felis pretium
-                gravida. Fusce erat sapien, pulvinar sed pharetra et,
-                fermentum mollis lacus.
+                Nossa turma reúne pessoas com histórias, experiências e níveis de conhecimento diferentes. Alguns estão dando os primeiros passos na tecnologia, outros estão mudando de carreira e há também quem já traga experiências de outras áreas e trajetórias.
               </p>
 
               <p>
-                Nullam laoreet nec purus eu ullamcorper. Aliquam pellentesque
-                elit eget volutpat hendrerit. Mauris semper rhoncus elementum.
-                Quisque non est eget urna volutpat commodo nec mollis urna.
+                Ao longo da Residência Full Stack 5.0, tivemos contato com diferentes etapas do desenvolvimento, passando por banco de dados, backend e frontend e transformando o conteúdo aprendido em prática a cada novo desafio.
               </p>
+
+              <p>
+                Entre códigos, dúvidas, descobertas e muitos aprendizados, cada pessoa contribui de uma forma diferente. É justamente essa diversidade de experiências, conhecimentos e perspectivas que torna a nossa turma única.
+              <p>
             </div>
           </article>
 
