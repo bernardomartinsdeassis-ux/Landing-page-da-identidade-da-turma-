@@ -1,0 +1,56 @@
+/* ===== Scroll Reveal — seções entrando de lados aleatórios ===== */
+.scroll-reveal {
+  opacity: 0;
+  transition:
+    transform 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 0.7s ease,
+    filter 0.7s ease;
+  will-change: transform, opacity;
+  filter: blur(6px);
+}
+
+.scroll-reveal--left {
+  transform: translate3d(-72px, 0, 0);
+}
+
+.scroll-reveal--right {
+  transform: translate3d(72px, 0, 0);
+}
+
+.scroll-reveal--up {
+  transform: translate3d(0, -72px, 0);
+}
+
+.scroll-reveal--down {
+  transform: translate3d(0, 72px, 0);
+}
+
+.scroll-reveal.is-revealed {
+  opacity: 1;
+  filter: blur(0);
+  transform: translate3d(0, 0, 0);
+}
+
+@media (max-width: 600px) {
+  .scroll-reveal--left,
+  .scroll-reveal--right {
+    transform: translate3d(0, 48px, 0);
+  }
+
+  .scroll-reveal--up {
+    transform: translate3d(0, -48px, 0);
+  }
+
+  .scroll-reveal--down {
+    transform: translate3d(0, 48px, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-reveal {
+    opacity: 1;
+    filter: none;
+    transform: none;
+    transition: none;
+  }
+}

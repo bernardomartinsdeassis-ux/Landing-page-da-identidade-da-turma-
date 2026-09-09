@@ -1,0 +1,191 @@
+/* ===== Identidade / Kinetic Typography ===== */
+.id_turma-section {
+  --identity-bg: #080d15;
+  --identity-green: #00e676;
+  --identity-purple: #7c4dff;
+  --identity-blue: #00b0ff;
+  --identity-text: #f8fafc;
+
+  position: relative;
+  min-height: calc(100vh - 78px);
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  padding: 5rem 1.25rem;
+  background:
+    radial-gradient(circle at 50% 45%, rgba(0, 230, 118, 0.08), transparent 30%),
+    var(--identity-bg);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.id_turma-section::before,
+.id_turma-section::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+}
+
+/* Grade de fundo */
+.id_turma-section::before {
+  inset: 0;
+  opacity: 0.24;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+  background-size: 42px 42px;
+  mask-image: linear-gradient(to bottom, black, transparent 90%);
+}
+
+/* Brilho central */
+.id_turma-section::after {
+  width: min(70vw, 700px);
+  height: min(70vw, 700px);
+  border-radius: 50%;
+  background: rgba(0, 230, 118, 0.05);
+  filter: blur(90px);
+}
+
+.identity-hero {
+  position: relative;
+  z-index: 1;
+  width: min(1100px, 100%);
+  text-align: center;
+}
+
+.identity-hero__eyebrow {
+  display: inline-block;
+  margin-bottom: 1.25rem;
+  color: var(--identity-green);
+  font-family: "JetBrains Mono", monospace;
+  font-size: clamp(0.65rem, 1.5vw, 0.8rem);
+  font-weight: 700;
+  letter-spacing: 0.18em;
+}
+
+.kinetic-title {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: clamp(5rem, 16vw, 12rem);
+  margin: 0;
+  perspective: 900px;
+  overflow: hidden;
+  color: var(--identity-text);
+  font-family: "Space Grotesk", "Segoe UI", sans-serif;
+  font-size: clamp(4rem, 15vw, 10rem);
+  font-weight: 800;
+  line-height: 0.85;
+  letter-spacing: -0.075em;
+  text-align: center;
+}
+
+.kinetic-title__word {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.kinetic-title__letter {
+  display: inline-block;
+  min-width: 0.55em;
+  opacity: 0;
+  filter: blur(8px);
+  transform:
+    translate3d(
+      calc((var(--i) - var(--total) / 2) * 9px),
+      130px,
+      0
+    )
+    rotateX(90deg)
+    rotateZ(calc((var(--i) - var(--total) / 2) * 9deg))
+    scale(0.45);
+  transition:
+    transform 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 0.42s ease,
+    filter 0.65s ease;
+  transition-delay: calc(var(--i) * 55ms);
+  text-shadow:
+    0 0 0 rgba(0, 230, 118, 0),
+    0 0 0 rgba(124, 77, 255, 0);
+}
+
+/* Estado inicial da entrada */
+.kinetic-title.is-entering .kinetic-title__letter {
+  opacity: 0;
+}
+
+/* Palavra visível */
+.kinetic-title.is-visible .kinetic-title__letter {
+  opacity: 1;
+  filter: blur(0);
+  transform: translate3d(0, 0, 0) rotateX(0) rotateZ(0) scale(1);
+  text-shadow:
+    0 0 18px rgba(0, 230, 118, 0.1),
+    0 0 42px rgba(124, 77, 255, 0.06);
+}
+
+/* Saída: cada letra segue uma direção ligeiramente diferente */
+.kinetic-title.is-exiting .kinetic-title__letter {
+  opacity: 0;
+  filter: blur(9px);
+  transform:
+    translate3d(
+      calc((var(--i) - var(--total) / 2) * -14px),
+      -145px,
+      0
+    )
+    rotateX(-85deg)
+    rotateZ(calc((var(--i) - var(--total) / 2) * -12deg))
+    scale(0.5);
+  transition-delay: calc(var(--i) * 45ms);
+}
+
+.identity-hero__description {
+  width: min(620px, 100%);
+  margin: 2rem auto 0;
+  color: #9ca3af;
+  font-family: "JetBrains Mono", monospace;
+  font-size: clamp(0.8rem, 2vw, 1rem);
+  line-height: 1.8;
+}
+
+.identity-hero__line {
+  width: min(180px, 35vw);
+  height: 2px;
+  margin: 2.5rem auto 0;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--identity-green),
+    var(--identity-purple),
+    transparent
+  );
+  box-shadow: 0 0 18px rgba(0, 230, 118, 0.45);
+}
+
+@media (max-width: 600px) {
+  .id_turma-section {
+    min-height: calc(100svh - 72px);
+    padding: 4rem 1rem;
+  }
+
+  .kinetic-title {
+    min-height: 4.5rem;
+    font-size: clamp(3.3rem, 17vw, 6rem);
+    letter-spacing: -0.07em;
+  }
+
+  .kinetic-title__letter {
+    min-width: 0.52em;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .kinetic-title__letter {
+    opacity: 1;
+    filter: none;
+    transform: none;
+    transition: none;
+  }
+}
