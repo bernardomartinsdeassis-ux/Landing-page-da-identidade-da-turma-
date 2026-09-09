@@ -156,12 +156,29 @@
   margin: 2.5rem auto 0;
   background: linear-gradient(
     90deg,
-    transparent,
-    var(--identity-green),
-    var(--identity-purple),
-    transparent
+    transparent 0%,
+    var(--identity-green) 20%,
+    var(--identity-blue) 40%,
+    var(--identity-purple) 60%,
+    var(--identity-green) 80%,
+    transparent 100%
   );
+  background-size: 220% 100%;
+  animation: identity-line-flow 4s ease-in-out infinite;
   box-shadow: 0 0 18px rgba(0, 230, 118, 0.45);
+}
+
+@keyframes identity-line-flow {
+  0%,
+  100% {
+    background-position: 100% 0;
+    filter: hue-rotate(0deg);
+  }
+
+  50% {
+    background-position: 0 0;
+    filter: hue-rotate(22deg);
+  }
 }
 
 @media (max-width: 600px) {
@@ -182,6 +199,10 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .identity-hero__line {
+    animation: none;
+  }
+
   .kinetic-title__letter {
     opacity: 1;
     filter: none;
