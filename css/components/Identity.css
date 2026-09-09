@@ -43,6 +43,22 @@
   border-radius: 50%;
   background: rgba(0, 230, 118, 0.05);
   filter: blur(90px);
+  opacity: 0.7;
+  transform: scale(0.82);
+  animation: identity-bg-pulse 5s ease-in-out infinite;
+}
+
+@keyframes identity-bg-pulse {
+  0%,
+  10% {
+    opacity: 0.48;
+    transform: scale(0.82);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.48);
+  }
 }
 
 .identity-hero {
@@ -199,6 +215,10 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .id_turma-section::after {
+    animation: none;
+  }
+
   .identity-hero__line {
     animation: none;
   }
