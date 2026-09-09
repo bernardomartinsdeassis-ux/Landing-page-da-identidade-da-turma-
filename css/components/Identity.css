@@ -1,0 +1,137 @@
+/* ==========================================================
+   Identity component — "Identidade da Turma"
+   Tokens follow the FullStack 5.0 brand book:
+   bg #0B0F17 / cards #121824 / green #00E676 / purple #7C4DFF / cyan #00B0FF
+   ========================================================== */
+
+.identity {
+    position: relative;
+    background: #0B0F17;
+    padding: 120px 24px;
+    overflow: hidden;
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+}
+
+/* Cyberpunk grid backdrop */
+.identity::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+            linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+    background-size: 56px 56px;
+    mask-image: radial-gradient(ellipse 60% 55% at 50% 40%, #000 40%, transparent 85%);
+    -webkit-mask-image: radial-gradient(ellipse 60% 55% at 50% 40%, #000 40%, transparent 85%);
+}
+
+.identity__inner {
+    position: relative;
+    max-width: 720px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* -- Mark -- */
+.identity__mark {
+    position: relative;
+    width: 172px;
+    height: 172px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.identity__ring {
+    position: absolute;
+    inset: 0;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 28px;
+    background: #121824;
+}
+
+.identity__mark svg {
+    position: relative;
+    width: 88px;
+    height: 88px;
+}
+
+.identity__glow {
+    position: absolute;
+    inset: -30px;
+    background: radial-gradient(circle, rgba(0, 230, 118, 0.28) 0%, transparent 70%);
+    filter: blur(6px);
+    animation: identity-pulse 3.6s ease-in-out infinite;
+}
+
+@keyframes identity-pulse {
+    0%, 100% { opacity: .55; transform: scale(1); }
+    50%      { opacity: 1;   transform: scale(1.06); }
+}
+
+.identity__brace {
+    position: absolute;
+    top: 6px;
+    right: -18px;
+    font-size: 13px;
+    letter-spacing: 1px;
+    color: #7C4DFF;
+    background: rgba(124, 77, 255, 0.12);
+    border: 1px solid rgba(124, 77, 255, 0.35);
+    padding: 3px 8px;
+    border-radius: 6px;
+}
+
+.identity__eyebrow {
+    color: #00E676;
+    font-size: 12px;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+}
+
+.identity__name {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-weight: 800;
+    font-size: 44px;
+    line-height: 1.1;
+    color: #FFFFFF;
+    letter-spacing: -0.5px;
+    margin-bottom: 8px;
+}
+
+.identity__name span {
+    color: #00E676;
+}
+
+.identity__slogan {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 19px;
+    color: #9CA3AF;
+    max-width: 480px;
+    line-height: 1.55;
+    margin: 18px 0 32px;
+}
+
+.identity__tagline {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    font-size: 13px;
+    letter-spacing: 2px;
+    color: #00B0FF;
+}
+
+.identity__tagline i {
+    color: rgba(255, 255, 255, 0.08);
+    font-style: normal;
+}
+
+@media (max-width: 520px) {
+    .identity { padding: 80px 20px; }
+    .identity__name { font-size: 32px; }
+    .identity__slogan { font-size: 16px; }
+}

@@ -1,4 +1,4 @@
-import { renderHeader } from './components/Header.js';
+import { renderHeader, initHeader } from './components/Header.js';
 import { renderIdentity} from './components/Identity.js';
 import { renderMembers } from './components/Members.js';
 import { renderMural } from './components/Mural.js';
@@ -19,3 +19,4 @@ app.innerHTML = `
     </main>
     ${renderFooter()}
 `;
+
