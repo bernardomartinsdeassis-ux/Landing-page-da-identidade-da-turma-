@@ -159,7 +159,7 @@ main section .titulo-quem-somos {
 
 .texto-quem-somos__conteudo p {
   color: var(--cor-texto);
-  font-size: 0.95rem;
+  font-size: 1rem;
   line-height: 1.8;
 }
 
@@ -209,7 +209,7 @@ main section .titulo-quem-somos {
   padding: 1.5rem;
   color: #e5e7eb;
   font-family: "JetBrains Mono", "Courier New", monospace;
-  font-size: clamp(0.7rem, 3.2vw, 0.85rem);
+  font-size: clamp(0.75rem, 3.2vw, 0.85rem);
   line-height: 2;
   text-align: left;
   white-space: pre;

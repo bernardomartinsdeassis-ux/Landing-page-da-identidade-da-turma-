@@ -36,21 +36,30 @@ export function initHeader() {
 
     if (!toggle || !list) return;
 
-    const closeMenu = () => {
-        list.classList.remove('navbar__list--open');
-        toggle.classList.remove('navbar__toggle--active');
-        toggle.setAttribute('aria-expanded', 'false');
-    };
-
-    toggle.addEventListener('click', () => {
-        const isOpen = list.classList.toggle('navbar__list--open');
+    const setMenuState = (isOpen) => {
+        list.classList.toggle('navbar__list--open', isOpen);
         toggle.classList.toggle('navbar__toggle--active', isOpen);
         toggle.setAttribute('aria-expanded', String(isOpen));
+        toggle.setAttribute('aria-label', isOpen ? 'Fechar menu' : 'Abrir menu');
+    };
+
+    const closeMenu = () => setMenuState(false);
+
+    toggle.addEventListener('click', () => {
+        const isOpen = toggle.getAttribute('aria-expanded') !== 'true';
+        setMenuState(isOpen);
     });
 
     // Fecha o menu ao clicar em um link (útil no mobile)
     list.querySelectorAll('.navbar__link').forEach((link) => {
         link.addEventListener('click', closeMenu);
+    });
+
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') {
+            closeMenu();
+            toggle.focus();
+        }
     });
 
     // Fecha o menu se a tela for redimensionada para desktop

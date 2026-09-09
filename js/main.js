@@ -1,5 +1,5 @@
-import { renderHeader } from './components/Header.js';
-import { renderIdentity} from './components/Identity.js';
+import { initHeader, renderHeader } from './components/Header.js';
+import { renderIdentity } from './components/Identity.js';
 import { renderMembers } from './components/Members.js';
 import { renderMural } from './components/Mural.js';
 import { renderTimeline } from './components/Timeline.js';
@@ -19,3 +19,10 @@ app.innerHTML = `
     </main>
     ${renderFooter()}
 `;
+
+initHeader();
+
+const ano = document.getElementById('ano');
+if (ano) {
+    ano.textContent = new Date().getFullYear();
+}

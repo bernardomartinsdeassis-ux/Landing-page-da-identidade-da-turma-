@@ -3,7 +3,8 @@
 .linha_tempo-section {
   background-color: #0d1117;
   color: #ffffff;
-  padding: 80px 0;
+  padding: clamp(3.5rem, 8vw, 5rem) 0;
+  text-align: left;
 }
 
 /* ---- Cabeçalho ---- */
@@ -26,7 +27,7 @@
 }
 
 .linha_tempo-header h2 {
-  font-size: 48px;
+  font-size: clamp(2rem, 5vw, 3rem);
   font-weight: 800;
   margin-bottom: 16px;
   color: #ffffff;
@@ -65,13 +66,14 @@
 .timeline {
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 24px;
   margin: 0;
   padding: 0;
 }
 
 .timeline-item {
+  min-width: 0;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -142,6 +144,8 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+  height: 100%;
+  min-width: 0;
 }
 
 .badge {
@@ -167,4 +171,41 @@
 .timeline-card p {
   font-size: 14px;
   color: #94a3b8;
+}
+
+/* ===== Tablet ===== */
+@media (max-width: 64rem) {
+  .linha_tempo-label {
+    position: static;
+    display: block;
+    margin-top: 1rem;
+  }
+
+  .timeline {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .timeline::before {
+    display: none;
+  }
+}
+
+/* ===== Celular ===== */
+@media (max-width: 42.5rem) {
+  .linha_tempo-header {
+    margin-bottom: 2rem;
+  }
+
+  .linha_tempo-description {
+    font-size: 1rem;
+  }
+
+  .timeline {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.5rem;
+  }
+
+  .timeline-card {
+    padding: 1.125rem;
+  }
 }

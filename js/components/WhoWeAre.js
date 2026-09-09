@@ -41,7 +41,7 @@ export function renderWhoWeAre() {
 
               <p>
                 Entre códigos, dúvidas, descobertas e muitos aprendizados, cada pessoa contribui de uma forma diferente. É justamente essa diversidade de experiências, conhecimentos e perspectivas que torna a nossa turma única.
-              <p>
+              </p>
             </div>
           </article>
 

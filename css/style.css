@@ -1,142 +1,164 @@
-/* ===== Reset básico ===== */
+/* ===== Base global responsiva ===== */
+:root {
+  color-scheme: dark;
+  --largura-conteudo: 1100px;
+  --recuo-pagina: clamp(1rem, 4vw, 2.5rem);
+  --altura-navbar: 4.75rem;
+}
+
 *,
 *::before,
 *::after {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: var(--altura-navbar);
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
-  font-family: 'Segoe UI', Arial, sans-serif;
+  min-width: 20rem;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-color: #0b0f17;
+  color: #e5e7eb;
+  font-family: "Space Grotesk", "Segoe UI", Arial, sans-serif;
+  font-size: 1rem;
   line-height: 1.6;
-  color: #222;
-  background-color: #fafafa;
+}
+
+button,
+input,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
 }
 
 a {
-  text-decoration: none;
   color: inherit;
+  text-decoration: none;
 }
 
-ul {
+ul,
+ol {
   list-style: none;
 }
 
-img {
-  max-width: 100%;
+img,
+picture,
+video,
+canvas,
+svg {
   display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
 }
 
 .container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 20px;
+  width: min(calc(100% - (2 * var(--recuo-pagina))), var(--largura-conteudo));
+  margin-inline: auto;
 }
 
-/* ===== Header ===== */
-.site-header {
-  background-color: #1f2937;
-  color: #fff;
-  position: sticky;
-  top: 0;
-  z-index: 100;
+main,
+main section,
+main section > * {
+  min-width: 0;
 }
 
-.site-header .container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-top: 16px;
-  padding-bottom: 16px;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-
-.logo {
-  font-size: 1.4rem;
-}
-
-.nav-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 24px;
-}
-
-.nav-links a {
-  transition: color 0.2s ease;
-}
-
-.nav-links a:hover {
-  color: #60a5fa;
-}
-
-/* ===== Seções (main) ===== */
 main section {
-  padding: 70px 0;
-  border-bottom: 1px solid #e5e7eb;
+  width: 100%;
+  padding-block: clamp(3.5rem, 8vw, 5.5rem);
+  border-bottom: 1px solid #263041;
+  scroll-margin-top: var(--altura-navbar);
   text-align: center;
 }
 
 main section h2 {
-  font-size: 1.8rem;
-  color: #1f2937;
+  color: #ffffff;
+  font-size: clamp(1.75rem, 5vw, 3rem);
+  line-height: 1.15;
 }
 
-/* Identidade da turma */
-.id_turma-section {
-  background-color: #eef2ff;
-   height: 1008px;
-}
-
-
-/* Integrantes */
-.integrantes-section {
-  background-color: #f3f4f6;
-   height: 1008px;
-}
-
-/* Mural da turma */
+/* As seções podem crescer conforme o grupo acrescentar conteúdo. */
+.id_turma-section,
+.integrantes-section,
 .mural_turma-section {
-  background-color: #ffffff;
-   height: 1008px;
+  min-height: min(63rem, calc(100svh - var(--altura-navbar)));
 }
 
-/* Linha do tempo */
-.linha_tempo-section {
-  background-color: #f3f4f6;
-   height: 1008px;
+.id_turma-section {
+  background-color: #111827;
 }
 
-/* ===== Footer ===== */
+.integrantes-section {
+  background-color: #0f172a;
+}
+
+.mural_turma-section {
+  background-color: #111827;
+}
+
+/* ===== Rodapé ===== */
 .site-footer {
-  background-color: #1f2937;
+  padding-block: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  background-color: #0b0f17;
   color: #cbd5e1;
   text-align: center;
-  padding: 20px 0;
 }
 
-/* ===== Responsivo ===== */
-@media (max-width: 600px) {
-  .site-header .container {
-    flex-direction: column;
-    text-align: center;
-  }
+.site-footer p {
+  font-size: 0.875rem;
+}
 
-  .nav-links {
-    justify-content: center;
-    gap: 14px;
-  }
+:focus-visible {
+  outline: 2px solid #00e676;
+  outline-offset: 4px;
+}
 
-  main section h2 {
-    font-size: 1.4rem;
+@media (max-width: 37.5rem) {
+  :root {
+    --recuo-pagina: 0.875rem;
+    --altura-navbar: 4.25rem;
   }
 
   main section {
-    padding: 50px 0;
+    padding-block: 3.25rem;
+  }
+
+  .id_turma-section,
+  .integrantes-section,
+  .mural_turma-section {
+    min-height: auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
   }
 }
